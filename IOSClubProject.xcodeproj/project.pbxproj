@@ -13,6 +13,8 @@
 		B572F5DB1C753CC400E9D5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B572F5D91C753CC400E9D5D3 /* Main.storyboard */; };
 		B572F5DD1C753CC400E9D5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B572F5DC1C753CC400E9D5D3 /* Assets.xcassets */; };
 		B572F5E01C753CC400E9D5D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B572F5DE1C753CC400E9D5D3 /* LaunchScreen.storyboard */; };
+		B572F5E91C754FA100E9D5D3 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F5E81C754FA100E9D5D3 /* CounterViewController.m */; };
+		B572F5EC1C754FBD00E9D5D3 /* TotalCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F5EB1C754FBD00E9D5D3 /* TotalCountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		B572F5DC1C753CC400E9D5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B572F5DF1C753CC400E9D5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B572F5E11C753CC400E9D5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B572F5E71C754FA100E9D5D3 /* CounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterViewController.h; sourceTree = "<group>"; };
+		B572F5E81C754FA100E9D5D3 /* CounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
+		B572F5EA1C754FBD00E9D5D3 /* TotalCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalCountViewController.h; sourceTree = "<group>"; };
+		B572F5EB1C754FBD00E9D5D3 /* TotalCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalCountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				B572F5D61C753CC400E9D5D3 /* ViewController.h */,
 				B572F5D71C753CC400E9D5D3 /* ViewController.m */,
 				B572F5D91C753CC400E9D5D3 /* Main.storyboard */,
+				B572F5EA1C754FBD00E9D5D3 /* TotalCountViewController.h */,
+				B572F5EB1C754FBD00E9D5D3 /* TotalCountViewController.m */,
+				B572F5E71C754FA100E9D5D3 /* CounterViewController.h */,
+				B572F5E81C754FA100E9D5D3 /* CounterViewController.m */,
 				B572F5DC1C753CC400E9D5D3 /* Assets.xcassets */,
 				B572F5DE1C753CC400E9D5D3 /* LaunchScreen.storyboard */,
 				B572F5E11C753CC400E9D5D3 /* Info.plist */,
@@ -149,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B572F5EC1C754FBD00E9D5D3 /* TotalCountViewController.m in Sources */,
 				B572F5D81C753CC400E9D5D3 /* ViewController.m in Sources */,
+				B572F5E91C754FA100E9D5D3 /* CounterViewController.m in Sources */,
 				B572F5D51C753CC400E9D5D3 /* AppDelegate.m in Sources */,
 				B572F5D21C753CC400E9D5D3 /* main.m in Sources */,
 			);

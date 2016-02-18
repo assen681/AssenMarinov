@@ -36,15 +36,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDV-sm-VcB">
-                                <rect key="frame" x="137" y="422" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDV-sm-VcB">
+                                <rect key="frame" x="136" y="422" width="49" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="Jwa-IT-LMh"/>
+                                    <constraint firstAttribute="height" constant="30" id="z7W-Lu-vko"/>
+                                </constraints>
+                                <state key="normal" title="Counts"/>
                                 <connections>
                                     <segue destination="9Uv-fm-Ik5" kind="show" id="gVt-En-aLA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucz-2g-xnW">
+                                <rect key="frame" x="74" y="105" width="168" height="126"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="MnE-fJ-kjk"/>
+                                    <constraint firstAttribute="height" constant="76" id="YiJ-Ky-82s"/>
+                                    <constraint firstAttribute="height" constant="126" id="sXT-cF-psB"/>
+                                    <constraint firstAttribute="width" constant="168" id="yhg-ln-MG2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MnE-fJ-kjk"/>
+                                        <exclude reference="YiJ-Ky-82s"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-Kb-Xb1">
+                                <rect key="frame" x="189" y="255" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlg-lD-cWc">
+                                <rect key="frame" x="26" y="255" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MDV-sm-VcB" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="0QF-9g-4Yj"/>
+                            <constraint firstItem="Ucz-2g-xnW" firstAttribute="top" secondItem="05r-At-8c3" secondAttribute="bottom" constant="41" id="1ea-H2-X4v"/>
+                            <constraint firstItem="Ucz-2g-xnW" firstAttribute="top" secondItem="05r-At-8c3" secondAttribute="bottom" constant="41" id="1n1-nf-IRe"/>
+                            <constraint firstItem="Ucz-2g-xnW" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="3wS-Eg-Xks"/>
+                            <constraint firstItem="Xlg-lD-cWc" firstAttribute="top" secondItem="Ucz-2g-xnW" secondAttribute="bottom" constant="24" id="3yC-q3-e8B"/>
+                            <constraint firstItem="Xlg-lD-cWc" firstAttribute="trailing" secondItem="Ucz-2g-xnW" secondAttribute="trailing" id="NFm-Io-fpc"/>
+                            <constraint firstItem="Xlg-lD-cWc" firstAttribute="centerX" secondItem="Ucz-2g-xnW" secondAttribute="centerX" id="XgN-kY-awr"/>
+                            <constraint firstItem="JkU-US-tzH" firstAttribute="top" secondItem="MDV-sm-VcB" secondAttribute="bottom" constant="67" id="Y81-ch-J1C"/>
+                            <constraint firstItem="Xlg-lD-cWc" firstAttribute="trailing" secondItem="Ucz-2g-xnW" secondAttribute="trailing" id="dKh-Dl-Oxh"/>
+                            <constraint firstItem="Ucz-2g-xnW" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="dbx-WH-ZOa"/>
+                            <constraint firstItem="lCE-Kb-Xb1" firstAttribute="centerX" secondItem="Ucz-2g-xnW" secondAttribute="centerX" id="nxZ-gh-1W0"/>
+                            <constraint firstItem="lCE-Kb-Xb1" firstAttribute="centerY" secondItem="Ucz-2g-xnW" secondAttribute="centerY" id="rFn-F1-O3c"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1ea-H2-X4v"/>
+                                <exclude reference="dbx-WH-ZOa"/>
+                                <exclude reference="NFm-Io-fpc"/>
+                                <exclude reference="dKh-Dl-Oxh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="atf-Sd-0Wa"/>
                 </viewController>
@@ -63,7 +121,25 @@
                     <view key="view" contentMode="scaleToFill" id="6ss-bL-cGp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-ty-Nww">
+                                <rect key="frame" x="98" y="134" width="124" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI5-S2-wHv">
+                                <rect key="frame" x="134" y="243" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G3y-ty-Nww" firstAttribute="top" secondItem="cbW-se-bkz" secondAttribute="bottom" constant="70" id="VjB-Bn-dmO"/>
+                            <constraint firstItem="G3y-ty-Nww" firstAttribute="centerX" secondItem="6ss-bL-cGp" secondAttribute="centerX" id="uRl-Hz-PVf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Counts" id="FFF-71-8Zo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
