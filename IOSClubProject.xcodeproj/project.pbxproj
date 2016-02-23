@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B5013A8D1C7BD795003B0F59 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5013A8C1C7BD795003B0F59 /* iTunesArtwork@2x.png */; };
+		B5013A901C7BDC7E003B0F59 /* BalanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5013A8F1C7BDC7E003B0F59 /* BalanceViewController.m */; };
+		B5013A921C7BE08B003B0F59 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5013A911C7BE08B003B0F59 /* CoreMotion.framework */; };
 		B572F5D21C753CC400E9D5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F5D11C753CC400E9D5D3 /* main.m */; };
 		B572F5D51C753CC400E9D5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F5D41C753CC400E9D5D3 /* AppDelegate.m */; };
 		B572F5D81C753CC400E9D5D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B572F5D71C753CC400E9D5D3 /* ViewController.m */; };
@@ -20,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		B5013A8C1C7BD795003B0F59 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		B5013A8E1C7BDC7E003B0F59 /* BalanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalanceViewController.h; sourceTree = "<group>"; };
+		B5013A8F1C7BDC7E003B0F59 /* BalanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalanceViewController.m; sourceTree = "<group>"; };
+		B5013A911C7BE08B003B0F59 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B572F5CD1C753CC400E9D5D3 /* IOSClubProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSClubProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B572F5D11C753CC400E9D5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B572F5D31C753CC400E9D5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5013A921C7BE08B003B0F59 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +56,7 @@
 		B572F5C41C753CC400E9D5D3 = {
 			isa = PBXGroup;
 			children = (
+				B5013A911C7BE08B003B0F59 /* CoreMotion.framework */,
 				B572F5CF1C753CC400E9D5D3 /* IOSClubProject */,
 				B572F5CE1C753CC400E9D5D3 /* Products */,
 			);
@@ -71,6 +78,8 @@
 				B572F5D61C753CC400E9D5D3 /* ViewController.h */,
 				B572F5D71C753CC400E9D5D3 /* ViewController.m */,
 				B572F5D91C753CC400E9D5D3 /* Main.storyboard */,
+				B5013A8E1C7BDC7E003B0F59 /* BalanceViewController.h */,
+				B5013A8F1C7BDC7E003B0F59 /* BalanceViewController.m */,
 				B572F5EA1C754FBD00E9D5D3 /* TotalCountViewController.h */,
 				B572F5EB1C754FBD00E9D5D3 /* TotalCountViewController.m */,
 				B572F5E71C754FA100E9D5D3 /* CounterViewController.h */,
@@ -123,6 +132,7 @@
 				TargetAttributes = {
 					B572F5CC1C753CC400E9D5D3 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Y2MMHJP22N;
 					};
 				};
 			};
@@ -164,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B572F5EC1C754FBD00E9D5D3 /* TotalCountViewController.m in Sources */,
+				B5013A901C7BDC7E003B0F59 /* BalanceViewController.m in Sources */,
 				B572F5D81C753CC400E9D5D3 /* ViewController.m in Sources */,
 				B572F5E91C754FA100E9D5D3 /* CounterViewController.m in Sources */,
 				B572F5D51C753CC400E9D5D3 /* AppDelegate.m in Sources */,
@@ -279,10 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IOSClubProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CC.IOSClubProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -290,10 +304,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IOSClubProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CC.IOSClubProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

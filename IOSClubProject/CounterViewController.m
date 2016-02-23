@@ -39,8 +39,9 @@
         [self.startButton setTitle:@"Start" forState:UIControlStateNormal];
     }
     else{
-        [self pauseTimer];
+        [self startTimer];
         [self.startButton setTitle:@"Pause" forState:UIControlStateNormal];
+        
     }
     self.isTimerRunning = !self.isTimerRunning;
 }
