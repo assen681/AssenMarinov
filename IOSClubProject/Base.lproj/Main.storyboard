@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
@@ -24,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1876" y="-103"/>
         </scene>
-        <!--View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="bAa-sA-qpI">
             <objects>
-                <viewController id="MhB-28-JXG" sceneMemberID="viewController">
+                <viewController id="MhB-28-JXG" customClass="CounterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05r-At-8c3"/>
                         <viewControllerLayoutGuide type="bottom" id="JkU-US-tzH"/>
@@ -58,7 +59,7 @@
                                     <constraint firstAttribute="width" constant="168" id="yhg-ln-MG2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -67,17 +68,23 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-Kb-Xb1">
-                                <rect key="frame" x="189" y="255" width="100" height="100"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Start"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlg-lD-cWc">
                                 <rect key="frame" x="26" y="255" width="100" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelPressed" destination="MhB-28-JXG" eventType="touchUpInside" id="uPE-5x-8su"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-Kb-Xb1">
+                                <rect key="frame" x="199" y="255" width="111" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startPressed" destination="MhB-28-JXG" eventType="touchUpInside" id="PcH-VX-jjX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,26 +92,43 @@
                             <constraint firstItem="MDV-sm-VcB" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="0QF-9g-4Yj"/>
                             <constraint firstItem="Ucz-2g-xnW" firstAttribute="top" secondItem="05r-At-8c3" secondAttribute="bottom" constant="41" id="1ea-H2-X4v"/>
                             <constraint firstItem="Ucz-2g-xnW" firstAttribute="top" secondItem="05r-At-8c3" secondAttribute="bottom" constant="41" id="1n1-nf-IRe"/>
+                            <constraint firstItem="Xlg-lD-cWc" firstAttribute="top" secondItem="Ucz-2g-xnW" secondAttribute="bottom" constant="24" id="1o0-bc-PAO"/>
                             <constraint firstItem="Ucz-2g-xnW" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="3wS-Eg-Xks"/>
                             <constraint firstItem="Xlg-lD-cWc" firstAttribute="top" secondItem="Ucz-2g-xnW" secondAttribute="bottom" constant="24" id="3yC-q3-e8B"/>
                             <constraint firstItem="Xlg-lD-cWc" firstAttribute="trailing" secondItem="Ucz-2g-xnW" secondAttribute="trailing" id="NFm-Io-fpc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lCE-Kb-Xb1" secondAttribute="trailing" constant="-10" id="PkH-Ik-pR8"/>
                             <constraint firstItem="Xlg-lD-cWc" firstAttribute="centerX" secondItem="Ucz-2g-xnW" secondAttribute="centerX" id="XgN-kY-awr"/>
                             <constraint firstItem="JkU-US-tzH" firstAttribute="top" secondItem="MDV-sm-VcB" secondAttribute="bottom" constant="67" id="Y81-ch-J1C"/>
+                            <constraint firstItem="lCE-Kb-Xb1" firstAttribute="centerY" secondItem="xqE-nU-dMe" secondAttribute="centerY" id="YDR-An-KYN"/>
+                            <constraint firstItem="Xlg-lD-cWc" firstAttribute="leading" secondItem="xqE-nU-dMe" secondAttribute="leadingMargin" constant="6" id="bZc-wC-0kI"/>
                             <constraint firstItem="Xlg-lD-cWc" firstAttribute="trailing" secondItem="Ucz-2g-xnW" secondAttribute="trailing" id="dKh-Dl-Oxh"/>
                             <constraint firstItem="Ucz-2g-xnW" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="dbx-WH-ZOa"/>
+                            <constraint firstItem="lCE-Kb-Xb1" firstAttribute="centerX" secondItem="xqE-nU-dMe" secondAttribute="centerX" id="mLh-T4-yla"/>
                             <constraint firstItem="lCE-Kb-Xb1" firstAttribute="centerX" secondItem="Ucz-2g-xnW" secondAttribute="centerX" id="nxZ-gh-1W0"/>
                             <constraint firstItem="lCE-Kb-Xb1" firstAttribute="centerY" secondItem="Ucz-2g-xnW" secondAttribute="centerY" id="rFn-F1-O3c"/>
+                            <constraint firstItem="lCE-Kb-Xb1" firstAttribute="top" secondItem="Ucz-2g-xnW" secondAttribute="bottom" constant="24" id="x0v-3H-zgo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="1ea-H2-X4v"/>
                                 <exclude reference="dbx-WH-ZOa"/>
+                                <exclude reference="3yC-q3-e8B"/>
                                 <exclude reference="NFm-Io-fpc"/>
+                                <exclude reference="XgN-kY-awr"/>
                                 <exclude reference="dKh-Dl-Oxh"/>
+                                <exclude reference="YDR-An-KYN"/>
+                                <exclude reference="mLh-T4-yla"/>
+                                <exclude reference="nxZ-gh-1W0"/>
+                                <exclude reference="rFn-F1-O3c"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="atf-Sd-0Wa"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="Xlg-lD-cWc" id="kAL-JZ-DDT"/>
+                        <outlet property="startButton" destination="lCE-Kb-Xb1" id="ixD-RX-sS5"/>
+                        <outlet property="timerLabel" destination="Ucz-2g-xnW" id="UBy-hL-BBe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWP-lX-soV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,7 +137,7 @@
         <!--Counts-->
         <scene sceneID="g2i-EL-wRc">
             <objects>
-                <viewController id="9Uv-fm-Ik5" sceneMemberID="viewController">
+                <viewController id="9Uv-fm-Ik5" customClass="TotalCountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cbW-se-bkz"/>
                         <viewControllerLayoutGuide type="bottom" id="zUX-dC-J8V"/>
@@ -125,13 +149,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3y-ty-Nww">
                                 <rect key="frame" x="98" y="134" width="124" height="101"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="68"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI5-S2-wHv">
                                 <rect key="frame" x="134" y="243" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
